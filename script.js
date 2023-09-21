@@ -6,7 +6,7 @@ let standingsData = null; // Store the fetched standings data
 document.getElementById('seeMoreBtn').addEventListener('click', toggleTableDisplay);
 
 async function fetchStandings() {
-    const apiUrl = 'http://api-football-standings.azharimm.dev/leagues/eng.1/standings?season=2023&sort=asc';
+    const apiUrl = 'https://api-football-standings.azharimm.dev/leagues/eng.1/standings?season=2023&sort=asc';
 
     try {
         const response = await fetch(apiUrl);
@@ -32,7 +32,7 @@ function updateTable(data) {
     // Create the table HTML
     const table = document.createElement('table');
     const headerRow = table.insertRow();
-    const headers = ['', 'Team', 'Wins', 'Draws', 'Losses', 'Points'];
+    const headers = ['', 'Tabell 2023/24', 'Wins', 'Draws', 'Losses', 'Points'];
 
     // Create table headers
     headers.forEach(headerText => {
