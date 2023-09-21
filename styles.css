@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -22,8 +22,8 @@ header {
 
 .logo {
     display: flex;
-    width: 56px;
-    height: 36px;
+    width: 60px;
+    height: 40px;
 }
 
 .hamburger {
@@ -50,11 +50,11 @@ header {
 }
 
 .nav-bar ul li a:hover {
-    background: #84001f;
+    background: red;
 }
 
 .nav-bar ul li a.active {
-    background: #84001f;
+    background: red;
 }
 
 @media only screen and (max-width: 1320px) {
@@ -156,12 +156,13 @@ h1 {
     font-size: 24px;
     margin: 0 0 20px;
     color: white;
+    font-weight: 300;
 }
 
 .join-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #84001f;
+    background-color: red;
     color: white;
     text-decoration: none;
     border-radius: 50px;
@@ -184,39 +185,35 @@ h1 {
 }
 
 .article {
-    background-color: #fff;
+    background-color: #000000;
     margin-bottom: 20px;
     flex-basis: calc(33.33% - 20px);
     text-align: center;
     box-sizing: border-box;
-    border-top: 5px solid #84001f;
-
+    border-radius: 20px;
 }
 
 .article img {
     max-width: 100%;
     height: 200px;
     object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .article-title {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 22px;
+    font-weight: 500;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
     cursor: pointer;
     transition: color 0.5s;
+    color: white;
 }
 
 .article-title:hover {
-    color: #84001f;
-}
-
-.read-more {
-    margin-top: 10px;
-    text-align: center;
-    padding: 20px;
+    color: red;
 }
 
 /* Tabell */
@@ -239,24 +236,22 @@ table th {
     background-color: #000000;
     color: white;
     padding: 8px;
-    /* Reduce cell padding */
     text-align: left;
-}
-
-table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    font-weight: 400;
 }
 
 table td {
     padding: 8px;
     border-bottom: 1px solid #ddd;
+    border-radius: 20px;
+
 }
 
 #seeMoreBtn {
     display: block;
     margin: 20px auto;
     /* Center the button horizontally and add spacing below the table */
-    background-color: #84001f76;
+    background-color: red;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -271,23 +266,18 @@ table td {
 
 @media (max-width: 800px) {
 
-    /* Adjust styles for smaller screens */
     table {
         width: 90%;
-        /* Full width for smaller screens */
         font-size: 12px;
-        /* Reduce font size for smaller screens */
     }
 
     table th,
     table td {
         padding: 4px;
-        /* Further reduce cell padding for smaller screens */
     }
 
     #standingsTableContainer {
         max-height: none;
-        /* Remove max height for smaller screens */
     }
 }
 
@@ -310,10 +300,13 @@ table td {
     margin: 10px 0;
     padding: 10px;
     background-color: #ffffff;
+    border-radius: 20px;
 }
 
 h2 {
     font-size: 28px;
+    font-weight: 300;
+    color: red;
 }
 
 .match-details {
@@ -327,7 +320,7 @@ h2 {
 }
 
 .match-date {
-    color: #777;
+    color: red;
 }
 
 .team {
@@ -363,12 +356,12 @@ h2 {
 
 .read-more-btn {
     padding: 5px 10px;
-    background-color: #84001f;
+    background-color: red;
     color: #fff;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 15px;
     transition: background-color 0.5s;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .read-more-btn:hover {
@@ -390,7 +383,7 @@ h2 {
     }
 
     .team img {
-        width: 100px;
+        width: 80px;
         /* Larger team logos on smaller screens */
         height: 100px;
         margin: 0 20px;
@@ -404,7 +397,7 @@ h2 {
 
 /* Footer styles */
 footer {
-    background-color: #84001f;
+    background-color: #000000;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -490,4 +483,70 @@ footer a {
         flex-basis: 100%;
         margin-right: 0;
     }
+
+    .article img {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+
+.contact-container {
+    margin: 0 auto;
+    width: auto;
+}
+
+form {
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: -40px;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-sumit {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.5s;
+}
+
+.btn-sumit:hover {
+    background-color: #84001f;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.form-success {
+    display: none;
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 2px;
 }

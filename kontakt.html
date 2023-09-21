@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervju</title>
+    <meta charset="UTF=8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="medlem.css">
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo"><img src="img/image 1.png" alt=""></div>
+        </a>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="medlem.html">MEDLEM</a></li>
+                <li><a href="kontakt.html" class="active">KONTAKT</a></li>
+                <li><a href="#">BILLETTINFORMASJON</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banner-2">
+        <img class="banner-image-2" src="img/kontakt.webp" alt="Banner Image">
+        <div class="overlay">
+            <h1 class="banner-title">KONTAKT OSS</h1>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="page-content">
+            <main class="contact-container">
+                <form id="contactForm">
+                    <div>
+                        <div class="form-success" id="formSuccess">You have succesfully sumited your request!</div>
+                    </div>
+                    <div>
+                        <label>
+                            First name (required)
+                            <input name="firstName" id="firstName" />
+                        </label>
+                        <div class="form-error" id="firstNameError">Please enter your first name</div>
+                    </div>
+
+                    <div>
+                        <label>
+                            Subject (minimum 15 characters)
+                            <input name="subject" id="subject" />
+                        </label>
+                        <div class="form-error" id="subjectError">Your subject must be at least 15 characters</div>
+                    </div>
+
+                    <div>
+                        <label>
+                            Email (required)
+                            <input name="email" id="email" />
+                        </label>
+                        <div class="form-error" id="emailError">Please enter a valid email address</div>
+                    </div>
+
+                    <div>
+                        <label>
+                            Message (minimum 25 characters)
+                            <input name="message" id="message" />
+                        </label>
+                        <div class="form-error" id="messageError">Your message must be at least 25 characters</div>
+                    </div>
+
+
+                    <button class="btn-sumit">Submit</button>
+
+                </form>
+            </main>
+            <h2>KONTAKT</h2>
+            <p>
+                Her finner du kontaktinformasjon for Arsenal Norway. Vi har begrenset tilgjengelighet på telefon, og
+                foretrekker å bli kontaktet på e-post. Nestleder/kontaktperson er den eneste personen som hjelper med
+                medlemsspørsmål.
+            </p>
+
+            <h3>Leder: Ronny Madsen</h3>
+            <h4>Mail: leder@gunners.no </h4>
+            <h4>Telefon: 92236769</h4>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Website</p>
+    </footer>
+
+</body>
+<script src="nav.js"></script>
+<script src="contact.js"></script>
+
+</html>
