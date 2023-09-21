@@ -92,6 +92,7 @@ header {
         background: #000000;
         transition: 0.5s;
         overflow: hidden;
+        display: flex;
     }
 
     .nav-bar.active {
@@ -378,10 +379,6 @@ h2 {
     .matches {
         margin: 0 20px;
 
-    }
-
-    h2 {
-        margin: 20px;
     }
 
     .matches li {
