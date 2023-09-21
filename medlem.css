@@ -1,0 +1,115 @@
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1 {
+    color: black;
+}
+
+/* Style the page title */
+.page-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #84001f;
+}
+
+/* Style the page content text */
+.page-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Style the membership registration link */
+.page-content a {
+    color: #84001f;
+    text-decoration: underline;
+}
+
+.page-content a:hover {
+    color: #f00000;
+    /* Change link color on hover */
+    transition-duration: 0.5s;
+}
+
+.page-image {
+    display: block;
+    margin: 0 auto;
+    /* Center the image horizontally */
+    max-width: 100%;
+    /* Ensure the image does not exceed the container width */
+    margin-top: 20px;
+    /* Add space between the title and image */
+}
+
+
+
+/* Style the banner container */
+.banner-2 {
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.banner-image-2 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Add overlay with slight black effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.banner-title {
+    font-size: 80px;
+    margin: 0;
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .banner-2 {
+        max-height: 300px;
+    }
+
+    .banner-title {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner-2 {
+        max-height: 200px;
+    }
+
+    .banner-title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .banner-2 {
+        max-height: 150px;
+    }
+
+    .banner-title {
+        font-size: 40px;
+    }
+}
