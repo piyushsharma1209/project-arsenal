@@ -35,11 +35,8 @@
 .page-image {
     display: block;
     margin: 0 auto;
-    /* Center the image horizontally */
     max-width: 100%;
-    /* Ensure the image does not exceed the container width */
     margin-top: 20px;
-    /* Add space between the title and image */
 }
 
 

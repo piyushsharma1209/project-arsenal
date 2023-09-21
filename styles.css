@@ -93,6 +93,7 @@ header {
         transition: 0.5s;
         overflow: hidden;
         display: flex;
+        z-index: 10;
     }
 
     .nav-bar.active {
