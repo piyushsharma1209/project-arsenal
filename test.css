@@ -1,0 +1,625 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    background-color: #F1F1F1;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+
+header {
+    width: auto;
+    background-color: black;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.logo {
+    display: flex;
+    width: 60px;
+    height: 40px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li {
+    list-style: none;
+}
+
+
+.nav-bar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    background: red;
+}
+
+.nav-bar ul li a.active {
+    background: red;
+}
+
+@media only screen and (max-width: 1320px) {
+    header {
+        padding: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: auto;
+        background: #000000;
+        transition: 0.5s;
+        overflow: hidden;
+        display: flex;
+        z-index: 10;
+    }
+
+    .nav-bar.active {
+        height: 450px;
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 12px;
+    }
+}
+
+/* Style the banner container */
+.banner {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style the banner overlay */
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /* Background with opacity */
+    padding: 20px;
+    color: white;
+}
+
+/* Style the banner container */
+.banner-3 {
+    position: relative;
+    width: 100%;
+    max-height: 200px;
+    overflow: hidden;
+}
+
+.banner-image-3 {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+}
+
+/* Add overlay with slight black effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.banner-title {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    transition: color 0.5s;
+}
+
+.banner-title:hover {
+    color: rgb(200, 200, 200);
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .banner-3 {
+        max-height: 200px;
+    }
+
+    .banner-title {
+        font-size: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner-3 {
+        max-height: 200px;
+    }
+
+    .banner-title {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .banner-3 {
+        max-height: 150px;
+    }
+
+    .banner-title {
+        font-size: 30px;
+    }
+}
+
+
+.card {
+    max-width: 100%;
+    background-color: #000000;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.card:hover {
+    background-color: red;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+}
+
+/* nyheter */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.article {
+    background-color: #000000;
+    margin-bottom: 20px;
+    flex-basis: calc(33.33% - 20px);
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.article img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.article-title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: color 0.5s;
+    color: white;
+}
+
+.article-title:hover {
+    color: red;
+}
+
+/* Tabell */
+table {
+    width: 800px;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+#standingsTableContainer {
+    text-align: center;
+    margin-top: 20px;
+    overflow: hidden;
+    max-height: 400px;
+    position: relative;
+    transition: 0.5s;
+}
+
+table th {
+    background-color: #000000;
+    color: white;
+    padding: 8px;
+    text-align: left;
+    font-weight: 400;
+}
+
+table td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    border-radius: 20px;
+
+}
+
+#seeMoreBtn {
+    display: block;
+    margin: 20px auto;
+    /* Center the button horizontally and add spacing below the table */
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+#seeMoreBtn:hover {
+    background-color: #84001f;
+}
+
+@media (max-width: 800px) {
+
+    table {
+        width: 90%;
+        font-size: 12px;
+    }
+
+    table th,
+    table td {
+        padding: 4px;
+    }
+
+    #standingsTableContainer {
+        max-height: none;
+    }
+}
+
+/* Style for the scoreboard  */
+.scoreboard {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.matches {
+    list-style: none;
+    padding: 0;
+}
+
+.matches li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-bottom: 1px solid lightgray;
+}
+
+.scoreboard h2 {
+    font-size: 28px;
+    font-weight: 300;
+    color: red;
+}
+
+.match-details {
+    flex-grow: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.match-competition {
+    font-weight: bold;
+}
+
+.match-date {
+    color: red;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    object-fit: contain;
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+.score {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Style for the league logo */
+.league-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+.read-more-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.5s;
+    font-size: 16px;
+}
+
+.read-more-btn:hover {
+    background-color: #4d0012;
+}
+
+@media (max-width: 800px) {
+
+    .matches {
+        margin: 0 20px;
+
+    }
+
+    .matches li {
+        flex-direction: column;
+        /* Stack items vertically on smaller screens */
+        text-align: center;
+        /* Center-align content */
+    }
+
+    .team img {
+        width: 80px;
+        /* Larger team logos on smaller screens */
+        height: 100px;
+        margin: 0 20px;
+    }
+
+    .vs {
+        margin: 5px 0;
+    }
+
+    .scoreboard h2 {
+        margin-left: 20px;
+    }
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Optionally, style links within the footer */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+
+/* Media Queries for Banner Responsiveness */
+
+@media screen and (max-width: 800px) {
+    .banner {
+        max-height: 300px;
+        /* Adjust the maximum height for screens up to 800px */
+    }
+
+    .banner-text {
+        font-size: 20px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .join-button {
+        padding: 8px 16px;
+        /* Make the button smaller for screens up to 800px */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .banner {
+        max-height: 200px;
+        /* Adjust the maximum height for screens up to 600px */
+    }
+
+    .banner-text {
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .join-button {
+        padding: 6px 12px;
+        /* Make the button even smaller for screens up to 600px */
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .banner {
+        max-height: 150px;
+        /* Adjust the maximum height for screens up to 400px */
+    }
+
+    .banner-text {
+        font-size: 16px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .join-button {
+        padding: 4px 8px;
+        /* Make the button smallest for screens up to 400px */
+    }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .article {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .article img {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+
+.contact-container {
+    margin: 0 auto;
+    width: auto;
+}
+
+form {
+    padding: 2em;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: -40px;
+}
+
+input {
+    width: 100%;
+    margin-top: 2px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn-sumit {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: red;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.btn-sumit:hover {
+    background-color: #84001f;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+}
+
+.form-error {
+    display: none;
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 2px;
+}
+
+.form-success {
+    display: none;
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 2px;
+}

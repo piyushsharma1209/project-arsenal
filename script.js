@@ -89,3 +89,5 @@ function toggleTableDisplay() {
 }
 
 fetchStandings();
+
+
