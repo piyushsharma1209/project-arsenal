@@ -138,7 +138,6 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    /* Background with opacity */
     padding: 20px;
     color: white;
 }
@@ -244,7 +243,6 @@ table td {
 #seeMoreBtn {
     display: block;
     margin: 20px auto;
-    /* Center the button horizontally and add spacing below the table */
     background-color: red;
     color: white;
     padding: 10px 20px;
@@ -371,9 +369,7 @@ h2 {
 
     .matches li {
         flex-direction: column;
-        /* Stack items vertically on smaller screens */
         text-align: center;
-        /* Center-align content */
     }
 
     .team img {
@@ -385,6 +381,10 @@ h2 {
 
     .vs {
         margin: 5px 0;
+    }
+
+    .scoreboard h2 {
+        margin-left: 20px;
     }
 }
 
@@ -412,51 +412,42 @@ footer a {
 @media screen and (max-width: 800px) {
     .banner {
         max-height: 300px;
-        /* Adjust the maximum height for screens up to 800px */
     }
 
     .banner-text {
         font-size: 20px;
-        /* Adjust font size for smaller screens */
     }
 
     .join-button {
         padding: 8px 16px;
-        /* Make the button smaller for screens up to 800px */
     }
 }
 
 @media screen and (max-width: 600px) {
     .banner {
         max-height: 200px;
-        /* Adjust the maximum height for screens up to 600px */
     }
 
     .banner-text {
         font-size: 18px;
-        /* Adjust font size for smaller screens */
     }
 
     .join-button {
         padding: 6px 12px;
-        /* Make the button even smaller for screens up to 600px */
     }
 }
 
 @media screen and (max-width: 400px) {
     .banner {
         max-height: 150px;
-        /* Adjust the maximum height for screens up to 400px */
     }
 
     .banner-text {
         font-size: 16px;
-        /* Adjust font size for smaller screens */
     }
 
     .join-button {
         padding: 4px 8px;
-        /* Make the button smallest for screens up to 400px */
     }
 }
 
