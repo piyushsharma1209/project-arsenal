@@ -1,8 +1,6 @@
-// Add a variable to keep track of whether all teams are shown
 let allTeamsShown = false;
-let standingsData = null; // Store the fetched standings data
+let standingsData = null;
 
-// Add an event listener to the "See More" button
 document.getElementById('seeMoreBtn').addEventListener('click', toggleTableDisplay);
 
 async function fetchStandings() {
@@ -13,9 +11,8 @@ async function fetchStandings() {
         const data = await response.json();
 
         if (data.status) {
-            standingsData = data.data.standings; // Store the fetched data
-            updateTable(standingsData.slice(0, 5)); // Show only the top 5 teams initially
-            // If there are more than 5 teams, show the "See More" button
+            standingsData = data.data.standings;
+            updateTable(standingsData.slice(0, 5));
             if (standingsData.length > 5) {
                 document.getElementById('seeMoreBtn').style.display = 'block';
             }
@@ -27,21 +24,17 @@ async function fetchStandings() {
     }
 }
 
-// Function to update the table with a given set of standings data
 function updateTable(data) {
-    // Create the table HTML
     const table = document.createElement('table');
     const headerRow = table.insertRow();
     const headers = ['', 'Tabell 2023/24', 'Wins', 'Draws', 'Losses', 'Points'];
 
-    // Create table headers
     headers.forEach(headerText => {
         const th = document.createElement('th');
         th.textContent = headerText;
         headerRow.appendChild(th);
     });
 
-    // Populate the table rows with data
     data.forEach(standing => {
         const row = table.insertRow();
         const logoCell = row.insertCell();
@@ -59,7 +52,6 @@ function updateTable(data) {
         pointsCell.textContent = standing.stats.find(stat => stat.name === 'points').displayValue;
     });
 
-    // Replace the existing table with the updated one
     const tableContainer = document.getElementById('standingsTableContainer');
     const existingTable = tableContainer.querySelector('table');
     if (existingTable) {
@@ -67,20 +59,16 @@ function updateTable(data) {
     }
     tableContainer.appendChild(table);
 
-    // Adjust the container's height based on the number of teams displayed
-    const containerHeight = data.length * 80 + 50; // Adjust as needed
+    const containerHeight = data.length * 80 + 50;
     tableContainer.style.maxHeight = `${containerHeight}px`;
 }
 
-// Function to toggle table display when the "See More" button is clicked
 function toggleTableDisplay() {
     if (standingsData) {
         if (allTeamsShown) {
-            // If all teams are shown, hide the extra rows
             updateTable(standingsData.slice(0, 5));
             document.getElementById('seeMoreBtn').textContent = 'See More';
         } else {
-            // If only the top 5 teams are shown, expand to show all
             updateTable(standingsData);
             document.getElementById('seeMoreBtn').textContent = 'See Less';
         }
