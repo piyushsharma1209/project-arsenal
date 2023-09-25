@@ -5,7 +5,6 @@
     margin-top: 20px;
 }
 
-/* Style the page title */
 .page-title {
     text-align: center;
     font-size: 24px;
@@ -13,14 +12,12 @@
     color: #84001f;
 }
 
-/* Style the page content text */
 .page-content p {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-/* Style the membership registration link */
 .page-content a {
     color: #84001f;
     text-decoration: underline;
@@ -28,7 +25,6 @@
 
 .page-content a:hover {
     color: #f00000;
-    /* Change link color on hover */
     transition-duration: 0.5s;
 }
 
@@ -41,7 +37,6 @@
 
 
 
-/* Style the banner container */
 .banner-2 {
     position: relative;
     width: 100%;
@@ -55,7 +50,6 @@
     object-fit: cover;
 }
 
-/* Add overlay with slight black effect */
 .overlay {
     position: absolute;
     top: 0;

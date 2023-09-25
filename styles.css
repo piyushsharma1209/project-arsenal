@@ -374,7 +374,6 @@ h2 {
 
     .team img {
         width: 80px;
-        /* Larger team logos on smaller screens */
         height: 100px;
         margin: 0 20px;
     }
@@ -398,7 +397,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Optionally, style links within the footer */
 footer a {
     color: #fff;
     text-decoration: none;
@@ -407,7 +405,6 @@ footer a {
 
 
 
-/* Media Queries for Banner Responsiveness */
 
 @media screen and (max-width: 800px) {
     .banner {
@@ -451,7 +448,6 @@ footer a {
     }
 }
 
-/* Media queries for responsiveness */
 @media (max-width: 600px) {
     .card {
         max-width: 100%;
