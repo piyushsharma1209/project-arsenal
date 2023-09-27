@@ -67,10 +67,10 @@ function toggleTableDisplay() {
     if (standingsData) {
         if (allTeamsShown) {
             updateTable(standingsData.slice(0, 5));
-            document.getElementById('seeMoreBtn').textContent = 'See More';
+            document.getElementById('seeMoreBtn').textContent = 'Se Mer';
         } else {
             updateTable(standingsData);
-            document.getElementById('seeMoreBtn').textContent = 'See Less';
+            document.getElementById('seeMoreBtn').textContent = 'Se Mindre';
         }
         allTeamsShown = !allTeamsShown;
     }
